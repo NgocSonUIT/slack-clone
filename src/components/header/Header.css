@@ -34,6 +34,11 @@
   border: none;
   text-align: center;
   min-width: 37vw;
+  color: white;
+}
+
+.header__search > input:focus {
+  outline: none;
 }
 
 .header__right {
@@ -45,4 +50,15 @@
 .header__right > .MuiSvgIcon-root {
   margin-left: auto;
   margin-right: 20px;
+}
+
+.header__avatar {
+  display: flex;
+}
+
+.header__signOut {
+  align-items: center;
+  display: flex;
+  margin-left: 8px;
+  cursor: pointer;
 }

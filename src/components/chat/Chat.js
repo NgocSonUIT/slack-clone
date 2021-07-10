@@ -42,8 +42,9 @@ const Chat = () => {
         </div>
       </div>
       <div className="chat_messages">
-        {roomMessages?.map(({message, timestamp, user, userImage}) => (
+        {roomMessages?.map(({message, timestamp, user, userImage}, id) => (
           <Message
+            key={id}
             message={message}
             timestamp={timestamp}
             user={user}

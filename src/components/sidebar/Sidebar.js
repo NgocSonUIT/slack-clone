@@ -55,8 +55,8 @@ const SideBar = () => {
       <hr />
       <SidebarOption Icon={AddIcon} title="Add Channel" addChannelOptions/>
 
-      {channels.map(channel => (
-        <SidebarOption title={channel.name} id={channel.id} />
+      {channels.map((channel, key) => (
+        <SidebarOption title={channel.name} id={channel.id} key={key} />
       ))}
     </div>
   )

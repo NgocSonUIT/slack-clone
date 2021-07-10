@@ -6,17 +6,19 @@ import SearchIcon from '@material-ui/icons/Search'
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline'
 import { useStateValue } from '../../store/StateProvider'
 
-const Header = () => {
+const Header = ({ signOut }) => {
   const [{user}] = useStateValue()
 
   return (
     <div className="header">
       <div className="header__left">
-        <Avatar
-          className="header__avatar"
-          alt={user?.displayName}
-          src={user?.photoURL}
-        />
+        <div className="header__avatar">
+          <Avatar
+            alt={user?.displayName}
+            src={user?.photoURL}
+          />
+          <div className="header__signOut" onClick={signOut}>Sign out</div>
+        </div>
         <AccessTimeIcon />
       </div>
       <div className="header__search">
